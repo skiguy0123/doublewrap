@@ -25,7 +25,7 @@ class DuplicityWrapper(object):
         c.optionxform = lambda option: option  # Preserve case
         cfg_file = os.path.expanduser(cfg_file)
         if not os.path.exists(cfg_file):
-            raise RuntimeError('{} does not exist.')
+            raise RuntimeError('{} does not exist.'.format(cfg_file))
         c.read(cfg_file)
 
         required_sections = {'AUTH': ['keyid'], 'DESTINATION': ['Host'], 'PATHS': []}
